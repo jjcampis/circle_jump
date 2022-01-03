@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://objects/Main.gd" type="Script" id=1]
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 239, 693 )
+offset = Vector2( 0, -200 )
+current = true
+smoothing_enabled = true
+
+[node name="start" type="Position2D" parent="."]
+position = Vector2( 240, 693 )
+
+[connection signal="tree_entered" from="." to="." method="_on_Main_tree_entered"]
